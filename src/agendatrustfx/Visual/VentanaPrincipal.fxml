@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import com.jfoenix.controls.JFXTreeTableView?>
+<?import de.jensd.fx.glyphs.emojione.EmojiOneView?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView?>
+<?import de.jensd.fx.glyphs.materialicons.MaterialIconView?>
+<?import java.net.URL?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="PAnchor" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="701.0" prefWidth="903.0" styleClass="background" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="agendatrustfx.Visual.VentanaPrincipalController">
+   <children>
+      <SplitPane dividerPositions="0.13161659513590845, 0.9356223175965666" layoutX="43.0" layoutY="33.0" orientation="VERTICAL" prefHeight="200.0" prefWidth="160.0" styleClass="transparente" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <items>
+            <AnchorPane fx:id="PAnchorSuperior" prefHeight="202.0" prefWidth="598.0" styleClass="transparente">
+               <children>
+                  <JFXButton fx:id="BCerrar" alignment="CENTER" contentDisplay="GRAPHIC_ONLY" layoutX="514.0" layoutY="7.0" onAction="#apretoCerrar" prefHeight="46.0" prefWidth="52.0" styleClass="botomTrasparente" text="." textFill="#fffafa" AnchorPane.rightAnchor="32.0" AnchorPane.topAnchor="7.0">
+                     <graphic>
+                        <EmojiOneView fill="WHITE" glyphName="X" size="30.0" styleClass=".icono" />
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton fx:id="BMinimizar" contentDisplay="GRAPHIC_ONLY" layoutX="407.0" layoutY="11.0" onAction="#apretoMinimizar" prefWidth="61.0" styleClass="botomTrasparente" text="." textFill="WHITE" AnchorPane.rightAnchor="120.0" AnchorPane.topAnchor="10.0">
+                     <graphic>
+                        <FontAwesomeIconView fill="#fffdfd" glyphName="WINDOW_MINIMIZE" size="30" styleClass=".icono" text="" />
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton fx:id="BMazimizar" contentDisplay="GRAPHIC_ONLY" layoutX="474.0" layoutY="11.0" onAction="#apretoMazimizar" styleClass="botomTrasparente" AnchorPane.rightAnchor="80.0" AnchorPane.topAnchor="11.0">
+                     <graphic>
+                        <FontAwesomeIconView glyphName="WINDOW_MAXIMIZE" size="30" />
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton fx:id="BHome" contentDisplay="GRAPHIC_ONLY" disable="true" layoutX="265.0" layoutY="20.0" onMousePressed="#apretoHome" styleClass="botomTrasparente" AnchorPane.rightAnchor="200.0" AnchorPane.topAnchor="15.0">
+                     <graphic>
+                        <FontAwesomeIconView glyphName="HOME" size="27.0" />
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton fx:id="BClearTodo" contentDisplay="GRAPHIC_ONLY" disable="true" layoutX="265.0" layoutY="20.0" onMousePressed="#apretoClearTodo" styleClass="botomTrasparente" AnchorPane.rightAnchor="240.0" AnchorPane.topAnchor="15.0">
+                     <graphic>
+                        <EmojiOneView glyphName="SKULL_CROSSBONES" size="27.0" styleClass="icono" />
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton fx:id="BActualizarTodo" contentDisplay="GRAPHIC_ONLY" layoutX="265.0" layoutY="20.0" onMousePressed="#apretoActualizarTodo" styleClass="botomTrasparente" AnchorPane.rightAnchor="280.0" AnchorPane.topAnchor="15.0">
+                     <graphic>
+                        <FontAwesomeIconView glyphName="REFRESH" size="25.0" styleClass="icono" />
+                     </graphic>
+                  </JFXButton>
+				  
+				  
+				  <JFXTextField fx:id="TBuscarDirecciones" layoutX="358.0" layoutY="54.0" prefHeight="25.0" prefWidth="222.0" promptText="Buscar Direcciones" styleClass="JFXtextFielTextoBlanco" AnchorPane.rightAnchor="299.0" />
+                  <JFXButton fx:id="BClearBusquedaDirecciones" contentDisplay="GRAPHIC_ONLY" layoutX="610.0" layoutY="54.0" onMousePressed="#apretoClearBusquedaDirecciones" prefHeight="25.0" prefWidth="29.0" styleClass="botomTrasparente" AnchorPane.rightAnchor="269.0">
+                     <graphic>
+                        <FontAwesomeIconView glyphName="CLOSE" size="17" />
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton fx:id="BBuscarDirecciones" contentDisplay="GRAPHIC_ONLY" layoutX="608.0" layoutY="54.0" onMousePressed="#apretoBuscarDirecciones" prefHeight="25.0" prefWidth="29.0" styleClass="botomTrasparente" AnchorPane.rightAnchor="239.0">
+                     <graphic>
+                        <FontAwesomeIconView glyphName="SEARCH" size="17" />
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton fx:id="BEditarDirecciones" contentDisplay="GRAPHIC_ONLY" disable="true" layoutX="698.0" layoutY="54.0" onMousePressed="#apretoEditarDirecciones" styleClass="botomTrasparente" AnchorPane.rightAnchor="89.0">
+                     <graphic>
+                        <FontAwesomeIconView glyphName="PENCIL_SQUARE_ALT" size="16.0" styleClass="icono" />
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton fx:id="BEliminarDirecciones" contentDisplay="GRAPHIC_ONLY" disable="true" layoutX="667.0" layoutY="54.0" onMousePressed="#apretoEliminarDirecciones" styleClass="botomTrasparente" AnchorPane.rightAnchor="119.0">
+                     <graphic>
+                        <MaterialDesignIconView glyphName="DELETE_FOREVER" size="17" styleClass="icono" />
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton fx:id="BClearDirecciones" contentDisplay="GRAPHIC_ONLY" disable="true" layoutX="638.0" layoutY="54.0" onMousePressed="#apretoClearDirecciones" styleClass="botomTrasparente" text="." AnchorPane.rightAnchor="149.0">
+                     <graphic>
+                        <MaterialDesignIconView glyphName="FILE" size="16" styleClass="icono" />
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton fx:id="BCrearDirecciones" contentDisplay="GRAPHIC_ONLY" layoutX="855.0" layoutY="54.0" onMousePressed="#apretoAgregarDirecciones" styleClass="botomTrasparente" AnchorPane.rightAnchor="28.0">
+                     <graphic>
+                        <EmojiOneView glyphName="HEAVY_PLUS_SIGN" styleClass="icono" />
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton fx:id="BAdministradorDirecciones" contentDisplay="GRAPHIC_ONLY" layoutX="676.0" layoutY="54.0" onAction="#apretoAdministradorDirecciones" styleClass="botomTrasparente" AnchorPane.rightAnchor="179.0">
+                     <graphic>
+                        <EmojiOneView glyphName="OPEN_FILE_FOLDER" size="19.0" />
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton fx:id="BGuardarDirecciones" contentDisplay="GRAPHIC_ONLY" layoutX="631.0" layoutY="54.0" onAction="#apretoGuardarDirecciones" styleClass="botomTrasparente" AnchorPane.rightAnchor="209.0">
+                     <graphic>
+                        <FontAwesomeIconView glyphName="FLOPPY_ALT" size="19" />
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton fx:id="BInformacionDirecciones" contentDisplay="GRAPHIC_ONLY" layoutX="835.0" layoutY="54.0" onMousePressed="#apretoInformacionDirecciones" styleClass="botomTrasparente" AnchorPane.rightAnchor="58.0">
+                     <graphic>
+                        <EmojiOneView glyphName="INFORMATION_SOURCE" styleClass="icono" />
+                     </graphic>
+                  </JFXButton>
+                  <MaterialIconView glyphName="CONTACTS" layoutX="49.0" layoutY="48.0" size="30" />
+                  <Text fx:id="TENombre" fill="#f8f8f8" layoutX="94.0" layoutY="39.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Agenda Trust">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Text>
+				  
+               </children>
+            </AnchorPane>
+            <StackPane fx:id="SPLista" prefHeight="150.0" prefWidth="200.0" styleClass="transparente">
+               <children>
+                  <JFXTreeTableView fx:id="TVSelecionarDirecciones" />
+               </children>
+            </StackPane>
+            <AnchorPane fx:id="PAnchorInferior" prefHeight="200.0" prefWidth="200.0" />
+         </items>
+      </SplitPane>
+   </children>
+   <stylesheets>
+      <URL value="@../../../ReneFX/src/Utiles/FX/CSS/css.css" />
+      <URL value="@../../../../ReneFX/src/Utiles/FX/CSS/css.css" />
+   </stylesheets>
+</AnchorPane>
